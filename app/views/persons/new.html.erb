@@ -1,0 +1,16 @@
+<h1>New Person</h1>
+<%= form_for :person do |f| %>
+  <p>
+    <%= f.label :Username %><br>
+    <%= f.text_field :Usename %>
+  </p>
+ 
+  <p>
+    <%= f.label :Pswd %><br>
+    <%= f.text_area :Pswd %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
