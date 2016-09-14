@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913100948) do
+ActiveRecord::Schema.define(version: 20160914103404) do
+
+  create_table "bidders", force: :cascade do |t|
+    t.string   "Bidder"
+    t.string   "username"
+    t.string   "pswd"
+    t.string   "email"
+    t.integer  "bidderid"
+    t.integer  "taskid"
+    t.float    "biddingamt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "biddingamts", force: :cascade do |t|
+    t.integer  "userid"
+    t.integer  "bidderid"
+    t.integer  "taskid"
+    t.float    "biddingamt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "people", force: :cascade do |t|
     t.string   "username"
